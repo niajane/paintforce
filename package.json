@@ -1,0 +1,19 @@
+{
+  "name": "paintforce",
+  "version": "1.0.0",
+  "description": "paint with friends!",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/niajane/paintforce.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/niajane/paintforce/issues"
+  },
+  "homepage": "https://github.com/niajane/paintforce#readme"
+}
