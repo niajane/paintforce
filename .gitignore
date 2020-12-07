@@ -104,4 +104,4 @@ dist
 .tern-port
 
 # scss map files
-.css.map
+*.css.map
