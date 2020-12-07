@@ -1,19 +1,30 @@
 div.colour-picker-container {
-    margin-top: 10px;
-    border: 5px solid black;
-    display: inline-flex;
+    margin: 0px 32px 0px 32px;
+    border-bottom: 2px solid #ba6ac3;
+    border-left: 2px solid #ba6ac3;
+    border-right: 2px solid #ba6ac3;
+    display: flex;
+    justify-content: center;
     align-items: center;
     padding: 10px;
+    background-color: #f3befb;
+}
+
+div.colour-picker-container>label, div.colour-picker-container>p {
+    color: #203995;
 }
 
 div.colour-picker-container>label {
-    color: #203995;
     font-size: 24px;
 }
+
+
 
 input#colour-picker {
     margin-left: 10px;
     margin-right: 10px;
     height: 40px;
     width: 40px;
+    border: none;
+    background-color: #f3befb;
 }
