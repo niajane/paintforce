@@ -10,7 +10,9 @@ function App() {
         </h1>
       </header>
       <Canvas />
-      <ColourPicker />
+      <div className="brush-controls-container">
+        <ColourPicker />
+      </div>
     </div>
   );
 }
