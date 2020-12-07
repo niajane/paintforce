@@ -1,6 +1,6 @@
 import './App.css';
 import Canvas from './components/canvas/Canvas';
-
+import ColourPicker from './components/ColourPicker/ColourPicker';
 function App() {
   return (
     <div className="App">
@@ -10,6 +10,7 @@ function App() {
         </h1>
       </header>
       <Canvas />
+      <ColourPicker />
     </div>
   );
 }
