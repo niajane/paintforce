@@ -13,10 +13,10 @@ export default class ColourPicker extends React.Component {
     render() {
         return (
             <div className="colour-picker-container">
-                <label htmlFor="colour-picker">
+                <span>
                     Choose A Colour:
-                </label>
-                <input type="color" id="colour-picker" onChange={this.handleInputChange}></input>
+                </span>
+                <input type="color" onChange={this.handleInputChange}></input>
                 <p className="selected-colour">{this.state.colour}</p>
             </div>
         );
