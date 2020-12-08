@@ -1,0 +1,34 @@
+.App {
+  text-align: center;
+  background-color: #c7c2c6;
+  min-height: 100vh;
+}
+
+.App-header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.App-header>h1 {
+  color: #203995;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+div.brush-controls-container {
+  margin: 0px 32px 0px 32px;
+  border-bottom: 2px solid #ba6ac3;
+  border-left: 2px solid #ba6ac3;
+  border-right: 2px solid #ba6ac3;
+  display: flex;
+  justify-content: left;
+  align-items: center;
+  padding: 10px;
+  background-color: #f3befb;
+}

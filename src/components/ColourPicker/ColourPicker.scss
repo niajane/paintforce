@@ -1,0 +1,25 @@
+div.colour-picker-container {
+    display: flex;
+    justify-content: left;
+    align-items: center;
+}
+div.colour-picker-container>span, div.colour-picker-container>p {
+    color: #203995;
+}
+
+div.colour-picker-container>span {
+    font-size: 24px;
+}
+
+div.colour-picker-container>input {
+    margin-left: 10px;
+    margin-right: 10px;
+    height: 40px;
+    width: 40px;
+    border: none;
+    background: none;
+}
+
+p.selected-colour { 
+    display: inline-block;
+}
