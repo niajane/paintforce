@@ -16,7 +16,7 @@ export default class ColourPicker extends React.Component {
                 <span>
                     Choose A Colour:
                 </span>
-                <input type="color" onChange={this.handleInputChange}></input>
+                <input type="color" value={this.state.colour} onChange={this.handleInputChange}></input>
                 <p className="selected-colour">{this.state.colour}</p>
             </div>
         );
