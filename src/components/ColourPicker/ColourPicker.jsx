@@ -4,9 +4,9 @@ import React from 'react';
 export default class ColourPicker extends React.Component {
     constructor(props) {
         super(props);
-
-        this.state = { colour: '#000000' };
-
+    
+        this.state = { colour: this.props.colour };       
+    
         this.handleInputChange = this.handleInputChange.bind(this);
     }
 
@@ -27,6 +27,7 @@ export default class ColourPicker extends React.Component {
      * @param {Object} event passed when onchange event is triggered for the colour-picker input field
      */
     handleInputChange(event) {
+        this.props.colourChangeHandler(event);
         this.setState({ colour: event.target.value });
     }
 }
