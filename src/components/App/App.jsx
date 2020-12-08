@@ -2,8 +2,8 @@ import './App.css';
 
 import React from 'react';
 
-import Canvas from './components/canvas/Canvas';
-import ColourPicker from './components/ColourPicker/ColourPicker';
+import Canvas from '../Canvas/Canvas';
+import ColourPicker from '../ColourPicker/ColourPicker';
 
 const STARTING_COLOUR = '#000000';
 
