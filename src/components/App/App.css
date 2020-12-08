@@ -22,13 +22,11 @@
 }
 
 div.brush-controls-container {
-  margin: 0px 32px 0px 32px;
+  margin: auto;
   border-bottom: 2px solid #ba6ac3;
   border-left: 2px solid #ba6ac3;
   border-right: 2px solid #ba6ac3;
-  display: flex;
-  justify-content: left;
-  align-items: center;
   padding: 10px;
   background-color: #f3befb;
+  width: 586px;
 }

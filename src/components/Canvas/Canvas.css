@@ -1,15 +1,12 @@
-div.canvas {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  border: 5px solid black;
-  height: 500px;
-  margin: 0px 32px 0px 32px;
-}
-
 div.grid {
-  background-color: white;
-  width: 100%;
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  border: 5px solid black;
+  height: 600px;
+  width: 600px;
 }
 
 div.grid:hover {
