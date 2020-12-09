@@ -1,6 +1,6 @@
-import './Canvas.css';
-import Cell from '../Cell/Cell';
-import React from 'react';
+import "./Canvas.css";
+import Cell from "../Cell/Cell";
+import React from "react";
 
 export default class Canvas extends React.Component {
     pixels = [];
@@ -10,16 +10,15 @@ export default class Canvas extends React.Component {
 
         this.generatePixels();
     }
+    
 
     render() {
-        return (
-            <div className="grid">
-                {this.pixels}
-            </div>
-        );
+        return <div className="grid">{this.pixels}</div>;
     }
 
     generatePixels() {
-        this.pixels = new Array(20).fill().map(() => new Array(20).fill(<Cell />));
+        this.pixels = new Array(20)
+            .fill()
+            .map(() => new Array(20).fill(<Cell />));
     }
 }

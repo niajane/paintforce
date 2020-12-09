@@ -1,32 +1,32 @@
 .App {
-  text-align: center;
-  background-color: #c7c2c6;
-  min-height: 100vh;
+    text-align: center;
+    background-color: #c7c2c6;
+    min-height: 100vh;
 }
 
 .App-header {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-size: calc(10px + 2vmin);
+    color: white;
 }
 
-.App-header>h1 {
-  color: #203995;
+.App-header > h1 {
+    color: #203995;
 }
 
 .App-link {
-  color: #61dafb;
+    color: #61dafb;
 }
 
 div.brush-controls-container {
-  margin: auto;
-  border-bottom: 2px solid #ba6ac3;
-  border-left: 2px solid #ba6ac3;
-  border-right: 2px solid #ba6ac3;
-  padding: 10px;
-  background-color: #f3befb;
-  width: 586px;
+    margin: auto;
+    border-bottom: 2px solid #ba6ac3;
+    border-left: 2px solid #ba6ac3;
+    border-right: 2px solid #ba6ac3;
+    padding: 10px;
+    background-color: #f3befb;
+    width: 586px;
 }

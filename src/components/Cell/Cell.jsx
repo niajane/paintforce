@@ -1,35 +1,52 @@
-import './Cell.css';
-import React from 'react';
+import "./Cell.css";
+import React from "react";
 
-const DEFAULT_COLOUR = '#ffffff';
+import { CELL_STARTING_COLOUR } from "../../constants";
+
+import colourPickerContext from "../../context/ColourPickerContext";
 
 export default class Cell extends React.Component {
     constructor(props) {
         super(props);
 
-        this.state = { 
-            cellColour: this.props.cellColour ? this.props.cellColour : DEFAULT_COLOUR
+        this.state = {
+            cellColour: this.props.cellColour
+                ? this.props.cellColour
+                : CELL_STARTING_COLOUR,
         };
 
         this.handleClick = this.handleClick.bind(this);
     }
 
-    handleClick(event) {
+    handleClick(event, colour) {
+        console.log(this.props);
         // if the user is dragging over, or clicking on the cell
-        if((event.type === 'mouseover' && event.buttons === 1) || event.type === 'mousedown') {
-            // TODO: change colour to be what was selected in colour picker
-            this.setState({cellColour: '#FF0000'});
+        if (
+            (event.type === "mouseover" && event.buttons === 1) ||
+            event.type === "mousedown"
+        ) {
+            this.setState({ cellColour: colour });
         }
     }
 
     render() {
         return (
-            <div 
-                className="cell-container"
-                style={ { background: `${this.state.cellColour}` } }
-                onMouseOver={this.handleClick}
-                onMouseDown={this.handleClick}
-            ></div>
+            <colourPickerContext.Consumer>
+                {({ colour }) => {
+                    return (
+                        <div
+                            className="cell-container"
+                            style={{ background: `${this.state.cellColour}` }}
+                            onMouseOver={(event) => {
+                                this.handleClick(event, colour);
+                            }}
+                            onMouseDown={(event) => {
+                                this.handleClick(event, colour);
+                            }}
+                        ></div>
+                    );
+                }}
+            </colourPickerContext.Consumer>
         );
     }
 }
