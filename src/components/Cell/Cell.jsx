@@ -28,7 +28,6 @@ export default class Cell extends React.Component {
                 className="cell-container"
                 style={ { background: `${this.state.cellColour}` } }
                 onMouseOver={this.handleClick}
-                onClick={this.handleClick}
                 onMouseDown={this.handleClick}
             ></div>
         );
