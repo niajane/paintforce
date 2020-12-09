@@ -20,8 +20,6 @@ export default class Canvas extends React.Component {
     }
 
     generatePixels() {
-        let cells = new Array(20).fill(<Cell />).map(() => new Array(20).fill(<Cell />));
-
-        this.pixels = cells;
+        this.pixels = new Array(20).fill().map(() => new Array(20).fill(<Cell />));
     }
 }
