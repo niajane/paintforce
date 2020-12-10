@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import { db } from "../services/firebase";
+import { db } from "../../services/firebase";
 
 export default class Chat extends Component {
     constructor(props) {
