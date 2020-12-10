@@ -19,7 +19,6 @@ export default class Cell extends React.Component {
     }
 
     handleClick(event, colour) {
-        console.log(this.props);
         // if the user is dragging over, or clicking on the cell
         if (
             (event.type === "mouseover" && event.buttons === 1) ||
