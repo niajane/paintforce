@@ -31,7 +31,7 @@ export default class Cell extends React.Component {
             (event.type === "mouseover" && event.buttons === 2) ||
             (event.type === "mousedown" && event.buttons === 2)
         ) {
-            this.setState({ cellColour: '#ffffff' });
+            this.setState({ cellColour: CELL_STARTING_COLOUR });
         }
     }
 
