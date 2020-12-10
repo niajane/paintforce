@@ -22,9 +22,16 @@ export default class Cell extends React.Component {
         // if the user is dragging over, or clicking on the cell
         if (
             (event.type === "mouseover" && event.buttons === 1) ||
-            event.type === "mousedown"
+            (event.type === "mousedown" && event.buttons === 1)
         ) {
             this.setState({ cellColour: colour });
+        }
+
+        if (
+            (event.type === "mouseover" && event.buttons === 2) ||
+            (event.type === "mousedown" && event.buttons === 2)
+        ) {
+            this.setState({ cellColour: '#ffffff' });
         }
     }
 
@@ -42,6 +49,7 @@ export default class Cell extends React.Component {
                             onMouseDown={(event) => {
                                 this.handleClick(event, colour);
                             }}
+                            onContextMenu={(e)=> e.preventDefault()}
                         ></div>
                     );
                 }}
