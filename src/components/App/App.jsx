@@ -4,6 +4,7 @@ import React from 'react';
 
 import Canvas from '../Canvas/Canvas';
 import ColourPicker from '../ColourPicker/ColourPicker';
+import Chat from '../Chat/Chat';
 
 const STARTING_COLOUR = '#000000';
 
@@ -33,6 +34,7 @@ export default class App extends React.Component {
           <ColourPicker colour={STARTING_COLOUR} colourChangeHandler={this.handleColourPickerChangeEvent} />
         </div>
         <p>Global colour: {this.state.colour}</p>
+        <Chat />
       </div>
     );
   }

@@ -108,3 +108,4 @@ dist
 
 # firebase config
 config.js
+.env
