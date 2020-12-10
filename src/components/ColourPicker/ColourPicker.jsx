@@ -1,33 +1,29 @@
 import './ColourPicker.css';
 import React from 'react';
 
-export default class ColourPicker extends React.Component {
-    constructor(props) {
-        super(props);
-    
-        this.state = { colour: this.props.colour };       
-    
-        this.handleInputChange = this.handleInputChange.bind(this);
-    }
+import colourPickerContext from '../../context/ColourPickerContext';
 
+export default class ColourPicker extends React.Component {
     render() {
         return (
             <div className="colour-picker-container">
                 <span>
                     Choose A Colour:
                 </span>
-                <input type="color" value={this.state.colour} onChange={this.handleInputChange}></input>
-                <p className="selected-colour">{this.state.colour}</p>
+
+                <colourPickerContext.Consumer>
+                    {({ colour, setColour }) => {
+                        return (
+                            <>
+                                <input type="color" value={colour} onChange={(event) => {
+                                    setColour(event);
+                                }}></input>
+                                <p className="selected-colour">{colour}</p>
+                            </>
+                        );
+                    }}
+                </colourPickerContext.Consumer>
             </div>
         );
-    }
-
-    /**
-     * This method will update the component's state with a colour when a new colour is selected on the colour picker.
-     * @param {Object} event passed when onchange event is triggered for the colour-picker input field
-     */
-    handleInputChange(event) {
-        this.props.colourChangeHandler(event);
-        this.setState({ colour: event.target.value });
     }
 }

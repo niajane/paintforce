@@ -1,0 +1,3 @@
+export const USER_SELECTED_STARTING_COLOUR = "#000000";
+
+export const CELL_STARTING_COLOUR = "#FFFFFF";
