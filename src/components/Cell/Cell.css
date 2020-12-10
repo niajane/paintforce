@@ -1,0 +1,10 @@
+.cell-container {
+  width: 28px;
+  height: 28px;
+  border: 1px solid black;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+}
+/*# sourceMappingURL=Cell.css.map */
