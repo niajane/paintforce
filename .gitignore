@@ -105,3 +105,6 @@ dist
 
 # scss map files
 *.css.map
+
+# firebase config
+config.js
