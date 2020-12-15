@@ -5,6 +5,7 @@ import React from "react";
 import Canvas from "../Canvas/Canvas";
 import ColourPicker from "../ColourPicker/ColourPicker";
 import colourPickerContext from "../../context/ColourPickerContext";
+import Chat from "../Chat/Chat";
 import { USER_SELECTED_STARTING_COLOUR } from "../../constants";
 
 export default class App extends React.Component {
@@ -37,6 +38,7 @@ export default class App extends React.Component {
                         <ColourPicker />
                     </div>
                 </colourPickerContext.Provider>
+                <Chat />
             </div>
         );
     }
