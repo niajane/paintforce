@@ -1,5 +1,6 @@
 import "./Cell.css";
 import React from "react";
+import { db } from "../../services/firebase";
 
 import { CELL_STARTING_COLOUR } from "../../constants";
 
@@ -10,6 +11,7 @@ export default class Cell extends React.Component {
         super(props);
 
         this.state = {
+            pos: this.props.pos,
             cellColour: this.props.cellColour
                 ? this.props.cellColour
                 : CELL_STARTING_COLOUR,
@@ -25,6 +27,8 @@ export default class Cell extends React.Component {
             event.type === "mousedown"
         ) {
             this.setState({ cellColour: colour });
+            let ref = "canvas/"+Math.floor(this.state.pos/20)+"/"+this.state.pos%20;
+            db.ref(ref).set(colour);
         }
     }
 
