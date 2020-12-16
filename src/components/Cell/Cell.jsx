@@ -36,6 +36,8 @@ export default class Cell extends React.Component {
             (event.type === "mousedown" && event.buttons === 2)
         ) {
             this.setState({ cellColour: CELL_STARTING_COLOUR });
+            let ref = "canvas/"+Math.floor(this.state.pos/20)+"/"+this.state.pos%20;
+            db.ref(ref).set(CELL_STARTING_COLOUR);
         }
     }
 
