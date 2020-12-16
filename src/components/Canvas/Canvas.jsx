@@ -15,7 +15,6 @@ export default class Canvas extends React.Component {
     
 
     render() {
-        console.log("render");
         return <div className="grid">{this.state.pixels}</div>;
     }
 
@@ -31,7 +30,7 @@ export default class Canvas extends React.Component {
     }
 
     componentDidMount() {
-        const canvasRef =  db.ref("canvas");
+        let canvasRef =  db.ref("canvas");
         canvasRef.on('value', (snapshot) => {
             let colors = snapshot.val();
             let newPixels = new Array(20)
@@ -39,7 +38,7 @@ export default class Canvas extends React.Component {
             .map(() => new Array(20).fill(null));
             for(let i = 0; i < 20; i++){
                 for(let j = 0; j < 20; j++){
-                    newPixels[i][j] = <Cell key={i*20+j} pos={i*20+j} cellColour={colors[i][j]}/>
+                    newPixels[i][j] = <Cell key={i*20+j+colors[i][j]} pos={i*20+j} cellColour={colors[i][j]}/>
                 }
             }
             this.setState({
