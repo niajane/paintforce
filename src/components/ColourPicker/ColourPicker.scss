@@ -1,17 +1,25 @@
 div.colour-picker-container {
     display: flex;
-    justify-content: left;
+    justify-content: space-between;
     align-items: center;
 }
-div.colour-picker-container>span, div.colour-picker-container>p {
+
+div.colour-picker-container > div.left {
+    display: flex;
+    align-items: center;
+}
+
+div.colour-picker-container > div.left > span,
+div.colour-picker-container > div.left > p,
+p.eraser-text {
     color: #203995;
 }
 
-div.colour-picker-container>span {
+div.colour-picker-container > div.left > span {
     font-size: 24px;
 }
 
-div.colour-picker-container>input {
+div.colour-picker-container > div.left > input {
     margin-left: 10px;
     margin-right: 10px;
     height: 40px;
@@ -20,6 +28,7 @@ div.colour-picker-container>input {
     background: none;
 }
 
-p.selected-colour { 
+p.selected-colour,
+p.eraser-text {
     display: inline-block;
 }

@@ -7,6 +7,7 @@ export default class ColourPicker extends React.Component {
     render() {
         return (
             <div className="colour-picker-container">
+                <div className="left">
                 <span>
                     Choose A Colour:
                 </span>
@@ -23,6 +24,9 @@ export default class ColourPicker extends React.Component {
                         );
                     }}
                 </colourPickerContext.Consumer>
+                </div>
+
+                <p className="eraser-text">Eraser: Right Click</p>
             </div>
         );
     }

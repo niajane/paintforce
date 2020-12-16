@@ -24,11 +24,18 @@ export default class Cell extends React.Component {
         // if the user is dragging over, or clicking on the cell
         if (
             (event.type === "mouseover" && event.buttons === 1) ||
-            event.type === "mousedown"
+            (event.type === "mousedown" && event.buttons === 1)
         ) {
             this.setState({ cellColour: colour });
             let ref = "canvas/"+Math.floor(this.state.pos/20)+"/"+this.state.pos%20;
             db.ref(ref).set(colour);
+        }
+
+        if (
+            (event.type === "mouseover" && event.buttons === 2) ||
+            (event.type === "mousedown" && event.buttons === 2)
+        ) {
+            this.setState({ cellColour: CELL_STARTING_COLOUR });
         }
     }
 
@@ -46,6 +53,7 @@ export default class Cell extends React.Component {
                             onMouseDown={(event) => {
                                 this.handleClick(event, colour);
                             }}
+                            onContextMenu={(e)=> e.preventDefault()}
                         ></div>
                     );
                 }}
